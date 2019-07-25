@@ -8,3 +8,14 @@ export const getCrimesData = () => {
       }
     })    
 }
+
+export const getTeamData = () => {
+  return fetch('http://nflarrest.com/api/v1/team')
+    .then(response => {
+      if(!response.ok){
+        throw Error('Error getting team data.')
+      } else {
+        return response.json()
+      }
+    })    
+}

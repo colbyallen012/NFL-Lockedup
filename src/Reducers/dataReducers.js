@@ -6,3 +6,12 @@ export const crimeReducer = (state=[], action) => {
       return state;
   }
 }
+
+export const teamReducer = (state=[], action) => {
+  switch(action.type) {
+    case 'SHOW_Teams':
+      return action.teams;
+    default:
+      return state;
+  }
+}

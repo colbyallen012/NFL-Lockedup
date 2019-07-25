@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {getCrimesData} from './apiCalls/apiCalls'
+import { getCrimesData, getTeamData } from './apiCalls/apiCalls'
 import { connect } from 'react-redux';
-import { showCrimes} from './Actions';
+import { showCrimes, showTeams } from './Actions';
+import TeamsContainer from './Containers/TeamsContainer'
 import './App.css';
 
 class App extends Component {
@@ -9,6 +10,9 @@ class App extends Component {
   async componentDidMount() {
     getCrimesData()
       .then(crimes => this.props.showCrimes(crimes))
+
+    getTeamData()
+      .then(teams => this.props.showTeams(teams))
   }
 
   render () {
@@ -17,17 +21,20 @@ class App extends Component {
         <header>
           <h1>NFL LockedUp</h1>
         </header>
+        <TeamsContainer teams={this.props.teams} />
       </main>
     )
   }
 }
 
 const mapStateToProps = (store) => ({
-  crimes: store.crimes
+  crimes: store.crimes,
+  teams: store.teams
 })
 
 const mapDispatchToProps = dispatch => ({
-  showCrimes: (crimes) => dispatch(showCrimes(crimes))
+  showCrimes: (crimes) => dispatch(showCrimes(crimes)),
+  showTeams: (teams) => dispatch(showTeams(teams))
 })
 
 export default connect (mapStateToProps, mapDispatchToProps)(App);
