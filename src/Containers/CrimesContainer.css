@@ -1,0 +1,8 @@
+.crimes-container {
+  background-size: initial;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  overflow: scroll;
+}

@@ -19,3 +19,15 @@ export const getTeamData = () => {
       }
     })    
 }
+
+export const getOneTeamData = (team) => {
+  return fetch(`http://nflArrest.com/api/v1/team/arrests/${team}`)
+    .then(response => {
+      if(!response.ok){
+        throw Error('Error getting team data.')
+      } else {
+        console.log(response.json())
+        // return response.json()
+      }
+  }) 
+}

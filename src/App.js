@@ -3,6 +3,7 @@ import { getCrimesData, getTeamData } from './apiCalls/apiCalls'
 import { connect } from 'react-redux';
 import { showCrimes, showTeams } from './Actions';
 import TeamsContainer from './Containers/TeamsContainer'
+import CrimesContainer from './Containers/CrimesContainer'
 import './App.css';
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
         <header>
           <h1>NFL LockedUp</h1>
         </header>
+        <CrimesContainer crimes={this.props.crimes}/>
         <TeamsContainer teams={this.props.teams} />
       </main>
     )
