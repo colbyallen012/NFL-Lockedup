@@ -1,8 +1,25 @@
+.crime-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.heading {
+  text-align: center;
+  width: 300px;
+}
+
 .crimes-container {
   background-size: initial;
   color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: fit-content;
   overflow: scroll;
+  height: 300px;
+  width: 250px;
+}
+
+.heading {
+  color: black;
 }

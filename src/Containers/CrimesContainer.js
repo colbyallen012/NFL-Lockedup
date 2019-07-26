@@ -13,9 +13,16 @@ const CrimesContainer = ({crimes}) => {
     )
   })
   return (
-    <section className='crimes-container'>
+    <div>
+      <section className='crime-header'>
+        <h2 className='heading'>All Crimes</h2>
+        <h2 className='heading'>Crimes By Player</h2>  
+        <h2 className='heading'>Crimes By Position</h2>      
+      </section>
+      <section className='crimes-container'>
         {displayCrimes}
-    </section>
+      </section>
+    </div>
   )
 }
 
