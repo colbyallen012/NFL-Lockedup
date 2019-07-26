@@ -5,6 +5,7 @@
 }
 
 .heading {
+  margin: auto;
   text-align: center;
   width: 300px;
 }
@@ -22,7 +23,7 @@
   height: fit-content;
   overflow: scroll;
   height: 300px;
-  width: 250px;
+  width: 420px;
 }
 
 .heading {

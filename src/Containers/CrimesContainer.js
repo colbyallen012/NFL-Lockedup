@@ -28,16 +28,13 @@ const CrimesContainer = ({crimes, players}) => {
 
   return (
     <div>
-      <section className='crime-header'>
-        <h2 className='heading'>All Crimes</h2>
-        <h2 className='heading'>Multiple Offenders</h2>  
-        <h2 className='heading'>Crimes By Position</h2>      
-      </section>
       <section className='all-container'>
         <article className='crimes-container'>
+          <h2 className='heading'>All Crimes</h2>
           {displayCrimes}
         </article>
         <article className='player-container'>
+          <h2 className='heading'>Multiple Offenders</h2>  
           {displayPlayers}
         </article>
       </section>
