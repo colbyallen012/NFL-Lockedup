@@ -4,7 +4,7 @@ import './Crime.css';
 const Crime = ({category, arrests}) => {
   return (
     <div className='crime'>
-      <h2>{category}</h2>
+      <h3>{category}</h3>
       <p>Arrests: {arrests}</p>
     </div>
   )

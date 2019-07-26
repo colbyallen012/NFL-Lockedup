@@ -31,3 +31,14 @@ export const getOneTeamData = (team) => {
       }
   }) 
 }
+
+export const getPlayerData = () => {
+  return fetch('http://nflarrest.com/api/v1/player')
+    .then(response => {
+      if(!response.ok){
+        throw Error('Error getting player data.')
+      } else {
+        return response.json()
+      }
+    })    
+}

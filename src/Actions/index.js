@@ -4,6 +4,11 @@ export const showCrimes = (crimes) => ({
 })
 
 export const showTeams = (teams) => ({
-  type: 'SHOW_Teams',
+  type: 'SHOW_TEAMS',
   teams
+})
+
+export const showPlayers = (players) => ({
+  type: 'SHOW_PLAYERS',
+  players
 })

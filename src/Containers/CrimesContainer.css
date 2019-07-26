@@ -9,7 +9,12 @@
   width: 300px;
 }
 
-.crimes-container {
+.all-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.crimes-container, .player-container {
   background-size: initial;
   color: white;
   display: flex;
