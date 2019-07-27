@@ -5,7 +5,7 @@ import { showTeamArrests, showCrimes, showPlayers } from '../Actions/index';
 import {Route, NavLink} from 'react-router-dom'
 import './TeamNavBar.css'
 import TeamsContainer from '../Containers/TeamsContainer'
-import CrimesContainer from '../Containers/CrimesContainer'
+// import CrimesContainer from '../Containers/CrimesContainer'
 
 class TeamNavBar extends Component {
 
@@ -17,8 +17,8 @@ class TeamNavBar extends Component {
   render () {
     return (
       <div>
-        <CrimesContainer crimes={this.props.crimes} players={this.props.players}/>
       <div className='nav-bar-container'>
+        <NavLink to='/' className='nav'>Home</NavLink>
         <NavLink to='/den' className='nav' onClick={() => this.singleTeamArrests('DEN')}>Denver Broncos</NavLink>
         <NavLink to='/min' className='nav' onClick={() => this.singleTeamArrests('MIN')}>Minnesota Vikings</NavLink>
         <NavLink to='/cin' className='nav' onClick={() => this.singleTeamArrests('CIN')}>Cincinati Bengals</NavLink>   
@@ -51,103 +51,201 @@ class TeamNavBar extends Component {
         <NavLink to='/la' className='nav' onClick={() => this.singleTeamArrests('LA')}>Los Angeles Rams</NavLink>   
         <NavLink to='/det' className='nav' onClick={() => this.singleTeamArrests('DET')}>Detroit Lions</NavLink> 
         <NavLink to='/hou' className='nav' onClick={() => this.singleTeamArrests('HOU')}>Houston Texans</NavLink>
-        </div>
-        <Route exact path='/Den' render={() => 
+      </div>
+      <div>
+        <Route exact path='/Den' render={() =>
+          <div>
+            <h2>Broncos</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Min' render={() => 
+          <div>
+            <h2>Vikings</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Cin' render={() => 
+          <div>
+            <h2>Bengals</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Jac' render={() => 
+          <div>
+            <h2>Jaguars</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Tb' render={() => 
+          <div>
+            <h2>Bucaneers</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Ten' render={() => 
+          <div>
+            <h2>Titans</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Cle' render={() => 
+          <div>
+            <h2>Browns</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Ind' render={() => 
+          <div>
+            <h2>Colts</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Kc' render={() => 
+          <div>
+            <h2>Chiefs</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Chi' render={() => 
+          <div>
+            <h2>Bears</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Mia' render={() => 
+          <div>
+            <h2>Dolphins</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Sea' render={() => 
+          <div>
+            <h2>Seahawks</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Sf' render={() => 
+          <div>
+            <h2>49ers</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Bal' render={() => 
+          <div>
+            <h2>Ravens</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Lac' render={() => 
+          <div>
+            <h2>Chargers</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/No' render={() => 
+          <div>
+            <h2>Saints</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Gb' render={() => 
+          <div>
+            <h2>Packers</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Pit' render={() => 
+          <div>
+            <h2>Steelers</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Nyj' render={() => 
+          <div>
+            <h2>Jets</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Ari' render={() => 
+          <div>
+            <h2>Cardinals</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Oak' render={() => 
+          <div>
+            <h2>Raiders</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Was' render={() => 
+          <div>
+            <h2>Redskins</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Dal' render={() => 
+          <div>
+            <h2>Cowboys</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Car' render={() => 
+          <div>
+            <h2>Panthers</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Buf' render={() => 
+          <div>
+            <h2>Bills</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Ne' render={() => 
+          <div>
+            <h2>Patriots</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Atl' render={() => 
-            <TeamsContainer arrests={this.props.teamArrests}/> 
+          <div>
+           <h2>Falcons</h2>
+           <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Phi' render={() => 
-            <TeamsContainer arrests={this.props.teamArrests}/> 
+          <div>
+           <h2>Eagles</h2>
+           <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/Nyg' render={() => 
+          <div>
+            <h2>Giants</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
         <Route exact path='/La' render={() => 
+          <div>
+            <h2>Rams</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+         </div>
         }/>
         <Route exact path='/Det' render={() => 
+          <div>
+            <h2>Lions</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
+          </div>
         }/>
          <Route exact path='/Hou' render={() => 
+          <div>
+            <h2>Texans</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
-        }/>            
+          </div>
+        }/> 
+      </div>           
       </div>
     )
   }
