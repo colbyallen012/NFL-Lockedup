@@ -7,10 +7,10 @@ export const crimeReducer = (state=[], action) => {
   }
 }
 
-export const teamReducer = (state=[], action) => {
+export const teamArrestsReducer = (state=[], action) => {
   switch(action.type) {
-    case 'SHOW_TEAMS':
-      return action.teams;
+    case 'SHOW_TEAM_ARRESTS':
+      return action.team;
     default:
       return state;
   }

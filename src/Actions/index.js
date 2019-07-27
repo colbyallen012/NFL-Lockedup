@@ -3,9 +3,9 @@ export const showCrimes = (crimes) => ({
   crimes
 })
 
-export const showTeams = (teams) => ({
-  type: 'SHOW_TEAMS',
-  teams
+export const showTeamArrests = (team) => ({
+  type: 'SHOW_TEAM_ARRESTS',
+  team
 })
 
 export const showPlayers = (players) => ({

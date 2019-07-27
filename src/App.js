@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import { getCrimesData, getTeamData, getPlayerData } from './apiCalls/apiCalls'
+import { getCrimesData, getPlayerData, getOneTeamData } from './apiCalls/apiCalls'
 import { connect } from 'react-redux';
-import { showCrimes, showTeams, showPlayers } from './Actions';
-import TeamsContainer from './Containers/TeamsContainer'
+import { showCrimes, showTeamArrests, showPlayers } from './Actions';
+import {Route, NavLink} from 'react-router-dom'
+// import TeamsContainer from './Containers/TeamsContainer'
 import CrimesContainer from './Containers/CrimesContainer'
 import './App.css';
 
@@ -12,11 +13,13 @@ class App extends Component {
     getCrimesData()
       .then(crimes => this.props.showCrimes(crimes))
 
-    getTeamData()
-      .then(teams => this.props.showTeams(teams))
-
     getPlayerData()
       .then(players => this.props.showPlayers(players))
+  }
+
+  singleTeamArrests = (team) => {
+    getOneTeamData(team)
+      .then(team => this.props.showTeamArrests(team))
   }
 
   render () {
@@ -26,7 +29,9 @@ class App extends Component {
           <h1>NFL LockedUp</h1>
         </header>
         <CrimesContainer crimes={this.props.crimes} players={this.props.players}/>
-        <TeamsContainer teams={this.props.teams} />
+        <NavLink to='/den' className='nav' onClick={() => this.singleTeamArrests('DEN')}>Denver Broncos</NavLink>
+        <NavLink to='/min' className='nav' onClick={() => this.singleTeamArrests('MIN')}>Minnesota Vikings</NavLink>
+        {/* <Route exact path='/Den' render={() => <Creatures data={unicornData}/>} /> */}
       </main>
     )
   }
@@ -34,13 +39,13 @@ class App extends Component {
 
 const mapStateToProps = (store) => ({
   crimes: store.crimes,
-  teams: store.teams,
+  teamArrests: store.teamArrests,
   players: store.players
 })
 
 const mapDispatchToProps = dispatch => ({
   showCrimes: (crimes) => dispatch(showCrimes(crimes)),
-  showTeams: (teams) => dispatch(showTeams(teams)),
+  showTeamArrests: (team) => dispatch(showTeamArrests(team)),
   showPlayers: (players) => dispatch(showPlayers(players))
 })
 
