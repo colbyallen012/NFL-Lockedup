@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import { getCrimesData, getPlayerData } from './apiCalls/apiCalls'
+// import { Route } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { showCrimes, showPlayers } from './Actions';
-import CrimesContainer from './Containers/CrimesContainer'
+// import CrimesContainer from './Containers/CrimesContainer'
 import TeamNavBar from './Containers/TeamNavBar'
 import './App.css';
 
@@ -22,9 +23,8 @@ class App extends Component {
         <header>
           <h1>NFL LockedUp</h1>
         </header>
-        <CrimesContainer crimes={this.props.crimes} players={this.props.players}/>
-        <TeamNavBar />
-        {/* <Route exact path='/Den' render={() => <Creatures data={unicornData}/>} /> */}
+        {/* <CrimesContainer crimes={this.props.crimes} players={this.props.players}/> */}
+        <TeamNavBar crimes={this.props.crimes} players={this.props.players} />
       </main>
     )
   }

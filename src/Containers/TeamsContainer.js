@@ -3,22 +3,24 @@ import Team from '../Components/Team'
 import './TeamsContainer.css'
 
 
-const TeamsContainer = ({teams}) => {
-  const displayTeams = teams.map(team => {
+const TeamsContainer = ({arrests}) => {
+  const displayTeamArrests = arrests.map(arrest => {
     return (
       <Team 
-        city={team.Team_city}
-        name={team.Team_name}
-        conference={team.Team_Conference}
-        abrv={team.Team}
-        key={team.Team}
+        player={arrest.Name}
+        position={arrest.Position_name}
+        arrest={arrest.Category}
+        description={arrest.description}
+        outcome={arrest.Outcome}
+        season={arrest.ArrestSeasonState}
+        key={arrest.Arrest_stats_id}
       />
     )
   })
   return (
     <section className='team-container'>
       <section className='team-container'>
-        {displayTeams}
+        {displayTeamArrests}
       </section>
     </section>
   )

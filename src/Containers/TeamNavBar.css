@@ -3,3 +3,10 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.nav {
+  background-color: yellow;
+  height: 75px;
+  margin: 10px;
+  width: 200px;
+}

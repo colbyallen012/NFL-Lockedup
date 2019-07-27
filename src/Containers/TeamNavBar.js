@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import { getOneTeamData } from '../apiCalls/apiCalls'
 import { connect } from 'react-redux';
-import { showTeamArrests } from '../Actions/index';
+import { showTeamArrests, showCrimes, showPlayers } from '../Actions/index';
 import {Route, NavLink} from 'react-router-dom'
-// import TeamsContainer from './Containers/TeamsContainer'
+import './TeamNavBar.css'
+import TeamsContainer from '../Containers/TeamsContainer'
+import CrimesContainer from '../Containers/CrimesContainer'
 
 class TeamNavBar extends Component {
 
@@ -14,6 +16,8 @@ class TeamNavBar extends Component {
 
   render () {
     return (
+      <div>
+        <CrimesContainer crimes={this.props.crimes} players={this.props.players}/>
       <div className='nav-bar-container'>
         <NavLink to='/den' className='nav' onClick={() => this.singleTeamArrests('DEN')}>Denver Broncos</NavLink>
         <NavLink to='/min' className='nav' onClick={() => this.singleTeamArrests('MIN')}>Minnesota Vikings</NavLink>
@@ -46,17 +50,118 @@ class TeamNavBar extends Component {
         <NavLink to='/nyg' className='nav' onClick={() => this.singleTeamArrests('NYG')}>New York Giants</NavLink>   
         <NavLink to='/la' className='nav' onClick={() => this.singleTeamArrests('LA')}>Los Angeles Rams</NavLink>   
         <NavLink to='/det' className='nav' onClick={() => this.singleTeamArrests('DET')}>Detroit Lions</NavLink> 
-        <NavLink to='/hou' className='nav' onClick={() => this.singleTeamArrests('HOU')}>Houston Texans</NavLink>             
+        <NavLink to='/hou' className='nav' onClick={() => this.singleTeamArrests('HOU')}>Houston Texans</NavLink>
+        </div>
+        <Route exact path='/Den' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Min' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Cin' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Jac' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Tb' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Ten' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Cle' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Ind' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Kc' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Chi' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Mia' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Sea' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Sf' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Bal' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Lac' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/No' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Gb' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Pit' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Nyj' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Ari' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Oak' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Was' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Dal' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Car' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Buf' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Ne' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Atl' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Phi' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Nyg' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/La' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+        <Route exact path='/Det' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>
+         <Route exact path='/Hou' render={() => 
+            <TeamsContainer arrests={this.props.teamArrests}/> 
+        }/>            
       </div>
     )
   }
 }
 
 const mapStateToProps = (store) => ({
+  crimes: store.crimes,
+  players: store.players,
   teamArrests: store.teamArrests
 })
 
 const mapDispatchToProps = dispatch => ({
+  showCrimes: (crimes) => dispatch(showCrimes(crimes)),
+  showPlayers: (players) => dispatch(showPlayers(players)),
   showTeamArrests: (team) => dispatch(showTeamArrests(team))
 })
 

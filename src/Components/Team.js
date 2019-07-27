@@ -1,13 +1,11 @@
 import React from 'react';
 import './Team.css';
 
-const Team = ({city, name, conference, abrv}) => {
+const Team = ({player, position, arrest, description, outcome, season}) => {
 
   return (
     <div className='team'>
-      <h2>{city}</h2>
-      <p>{name}</p>
-      <p>{conference}</p>
+      <li>{player} {position} {arrest} {description} {outcome} {season}</li>
     </div>
   )
 }
