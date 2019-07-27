@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import { crimeReducer, teamArrestsReducer, playerReducer } from './dataReducers'
+import { crimeReducer, teamArrestsReducer, playerReducer, positionReducer } from './dataReducers'
 
 export const rootReducer = combineReducers({
   crimes: crimeReducer,
   teamArrests: teamArrestsReducer,
-  players: playerReducer
+  players: playerReducer,
+  positions: positionReducer
 })

@@ -12,3 +12,8 @@ export const showPlayers = (players) => ({
   type: 'SHOW_PLAYERS',
   players
 })
+
+export const showPositions = (positions) => ({
+  type: 'SHOW_POSITIONS',
+  positions
+})

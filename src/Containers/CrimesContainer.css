@@ -16,7 +16,7 @@
   flex-direction: row;
 }
 
-.crimes-container, .player-container {
+.crimes-container, .player-container, .position-container {
   background-size: initial;
   color: white;
   display: flex;

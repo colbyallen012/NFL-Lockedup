@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import { getCrimesData, getPlayerData } from './apiCalls/apiCalls'
-import { Route } from 'react-router-dom'
+import { getCrimesData, getPlayerData, getPositionData } from './apiCalls/apiCalls'
 import { connect } from 'react-redux';
-import { showCrimes, showPlayers } from './Actions';
+import { showCrimes, showPlayers, showPositions } from './Actions';
 import CrimesContainer from './Containers/CrimesContainer'
 import TeamNavBar from './Containers/TeamNavBar'
 import './App.css';
@@ -15,6 +14,9 @@ class App extends Component {
 
     getPlayerData()
       .then(players => this.props.showPlayers(players))
+
+    getPositionData()
+      .then(positions => this.props.showPositions(positions))
   }
 
   render () {
@@ -23,7 +25,7 @@ class App extends Component {
           <header>
             <h1>NFL LockedUp</h1>
           </header>
-          <CrimesContainer crimes={this.props.crimes} players={this.props.players}/>
+          <CrimesContainer crimes={this.props.crimes} players={this.props.players} positions={this.props.positions}/>
           <TeamNavBar crimes={this.props.crimes} players={this.props.players} />
         </main>
     )
@@ -32,12 +34,14 @@ class App extends Component {
 
 const mapStateToProps = (store) => ({
   crimes: store.crimes,
-  players: store.players
+  players: store.players,
+  positions: store.positions
 })
 
 const mapDispatchToProps = dispatch => ({
   showCrimes: (crimes) => dispatch(showCrimes(crimes)),
-  showPlayers: (players) => dispatch(showPlayers(players))
+  showPlayers: (players) => dispatch(showPlayers(players)),
+  showPositions: (positions) => dispatch(showPositions(positions))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

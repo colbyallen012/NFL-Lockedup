@@ -30,3 +30,14 @@ export const getPlayerData = () => {
       }
     })    
 }
+
+export const getPositionData = () => {
+  return fetch('http://nflarrest.com/api/v1/position')
+    .then(response => {
+      if(!response.ok){
+        throw Error('Error getting player data.')
+      } else {
+        return response.json()
+      }
+    })    
+}

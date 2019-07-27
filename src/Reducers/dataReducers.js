@@ -24,3 +24,12 @@ export const playerReducer = (state=[], action) => {
       return state;
   }
 }
+
+export const positionReducer = (state=[], action) => {
+  switch(action.type) {
+    case 'SHOW_POSITIONS':
+      return action.positions;
+    default:
+      return state;
+  }
+}
