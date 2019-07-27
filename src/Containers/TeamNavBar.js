@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import { getOneTeamData } from '../apiCalls/apiCalls'
 import { connect } from 'react-redux';
-import { showTeamArrests, showCrimes, showPlayers } from '../Actions/index';
+import { showTeamArrests, showCrimes, showPlayers, emptyState } from '../Actions/index';
 import {Route, NavLink} from 'react-router-dom'
 import './TeamNavBar.css'
 import TeamsContainer from '../Containers/TeamsContainer'
+import Home from '../Components/Home'
 // import CrimesContainer from '../Containers/CrimesContainer'
 
 class TeamNavBar extends Component {
@@ -14,11 +15,15 @@ class TeamNavBar extends Component {
       .then(team => this.props.showTeamArrests(team))
   }
 
+  emptyState = () => {
+    this.props.emptyState()
+  }
+
   render () {
     return (
       <div>
       <div className='nav-bar-container'>
-        <NavLink to='/' className='nav'>Home</NavLink>
+        <NavLink to='/' className='nav' onClick={() => this.emptyState()}>Home</NavLink>
         <NavLink to='/den' className='nav' onClick={() => this.singleTeamArrests('DEN')}>Denver Broncos</NavLink>
         <NavLink to='/min' className='nav' onClick={() => this.singleTeamArrests('MIN')}>Minnesota Vikings</NavLink>
         <NavLink to='/cin' className='nav' onClick={() => this.singleTeamArrests('CIN')}>Cincinati Bengals</NavLink>   
@@ -53,6 +58,7 @@ class TeamNavBar extends Component {
         <NavLink to='/hou' className='nav' onClick={() => this.singleTeamArrests('HOU')}>Houston Texans</NavLink>
       </div>
       <div>
+        <Route exact path='/' component={Home}/>
         <Route exact path='/Den' render={() =>
           <div>
             <h2>Broncos</h2>
@@ -260,7 +266,8 @@ const mapStateToProps = (store) => ({
 const mapDispatchToProps = dispatch => ({
   showCrimes: (crimes) => dispatch(showCrimes(crimes)),
   showPlayers: (players) => dispatch(showPlayers(players)),
-  showTeamArrests: (team) => dispatch(showTeamArrests(team))
+  showTeamArrests: (team) => dispatch(showTeamArrests(team)),
+  emptyState: () => dispatch(emptyState())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(TeamNavBar);

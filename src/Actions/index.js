@@ -17,3 +17,7 @@ export const showPositions = (positions) => ({
   type: 'SHOW_POSITIONS',
   positions
 })
+
+export const emptyState = () => ({
+  type: 'EMPTY_STATE'
+})

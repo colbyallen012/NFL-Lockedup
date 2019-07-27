@@ -1,0 +1,12 @@
+/* .main { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+
+  }
+
+  .teams { grid-area: 1 / 1 / 6 / 2; }
+  .header { grid-area: 1 / 2 / 1 / 6; } 
+  .crimes { grid-area: 2 / 2 / 3 / 6; }  */

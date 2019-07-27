@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import { getCrimesData, getPlayerData, getPositionData } from './apiCalls/apiCalls'
 import { connect } from 'react-redux';
-import { showCrimes, showPlayers, showPositions } from './Actions';
+import { showCrimes, showPlayers, showPositions, showTeamArrests } from './Actions';
 import CrimesContainer from './Containers/CrimesContainer'
+import TeamsContainer from './Containers/TeamsContainer'
 import TeamNavBar from './Containers/TeamNavBar'
 import './App.css';
 
@@ -21,12 +22,19 @@ class App extends Component {
 
   render () {
     return (
-        <main>
-          <header>
+        <main className='main'>
+          <header className='header'>
             <h1>NFL LockedUp</h1>
           </header>
-          <CrimesContainer crimes={this.props.crimes} players={this.props.players} positions={this.props.positions}/>
-          <TeamNavBar crimes={this.props.crimes} players={this.props.players} />
+          <section className='crimes'>
+            <CrimesContainer crimes={this.props.crimes} players={this.props.players} positions={this.props.positions}/>
+          </section>
+          <section classname='teams'>
+            <TeamNavBar crimes={this.props.crimes} players={this.props.players} />
+          </section>
+          <section>
+            <TeamsContainer arrests={this.props.teamArrests}/>
+          </section>
         </main>
     )
   }
@@ -35,13 +43,15 @@ class App extends Component {
 const mapStateToProps = (store) => ({
   crimes: store.crimes,
   players: store.players,
-  positions: store.positions
+  positions: store.positions,
+  teamArrests: store.teamArrests
 })
 
 const mapDispatchToProps = dispatch => ({
   showCrimes: (crimes) => dispatch(showCrimes(crimes)),
   showPlayers: (players) => dispatch(showPlayers(players)),
-  showPositions: (positions) => dispatch(showPositions(positions))
+  showPositions: (positions) => dispatch(showPositions(positions)),
+  showTeamArrests: (team) => dispatch(showTeamArrests(team))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
