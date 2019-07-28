@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Team should match the snapshot 1`] = `
+<div
+  className="team"
+>
+  <li>
+    Colby Allen
+     
+    QB
+     
+    Bank Robbery
+     
+    Robbed a bank for 100 million dollars
+     
+    Still on the lamb
+     
+    Off season
+  </li>
+</div>
+`;
