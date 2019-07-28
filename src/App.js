@@ -6,7 +6,7 @@ import {Route} from 'react-router-dom'
 import CrimesContainer from './Containers/CrimesContainer'
 import TeamsContainer from './Containers/TeamsContainer'
 import TeamNavBar from './Containers/TeamNavBar'
-import Home from './Components/Home'
+import Home from './Components/Home/Home'
 import './App.css';
 
 class App extends Component {

@@ -14,6 +14,7 @@ describe('Team', () => {
         description='Robbed a bank for 100 million dollars'
         outcome='Still on the lamb'
         season='Off season' 
+        key={1}
       />)
   })
 

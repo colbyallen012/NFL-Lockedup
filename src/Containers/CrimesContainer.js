@@ -1,7 +1,7 @@
 import React from 'react'; 
-import Crime from '../Components/Crime'
-import Player from '../Components/Player'
-import Position from '../Components/Position'
+import Crime from '../Components/Crime/Crime'
+import Player from '../Components/Player/Player'
+import Position from '../Components/Position/Position'
 import './CrimesContainer.css'
 
 const CrimesContainer = ({crimes, players, positions}) => {

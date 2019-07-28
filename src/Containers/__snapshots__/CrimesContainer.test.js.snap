@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CrimesContainer should match snapshot 1`] = `
+<div>
+  <section
+    className="all-container"
+  >
+    <article
+      className="crimes-container"
+    >
+      <h2
+        className="heading"
+      >
+        By Crime
+      </h2>
+      <Crime
+        arrests="224"
+        category="DUI"
+      />
+      <Crime
+        arrests="107"
+        category="Drugs"
+      />
+    </article>
+    <article
+      className="player-container"
+    >
+      <h2
+        className="heading"
+      >
+        Multiple Offenders
+      </h2>
+      <Player
+        arrests="7"
+        city="TEN"
+        name="Kenny Britt"
+        position="WR"
+        team="Titans"
+      />
+    </article>
+    <article
+      className="position-container"
+    >
+      <h2
+        className="heading"
+      >
+        By Position
+      </h2>
+      <Player
+        arrests="148"
+        position="WR"
+      />
+      <Player
+        arrests="127"
+        position="LB"
+      />
+    </article>
+  </section>
+</div>
+`;
