@@ -91,7 +91,7 @@ describe ('actions', () => {
     expect(result).toEqual(expectedAction)
   })
 
-  it('should have a type SHOW_POSITIONS', () => {
+  it('should have a type of SHOW_POSITIONS', () => {
     const positions = [{
         Position: "WR",
         arrest_count: "148"
@@ -107,6 +107,16 @@ describe ('actions', () => {
     }
 
     const result = actions.showPositions(positions)
+
+    expect(result).toEqual(expectedAction)
+  })
+
+  it('should have a type of EMPTY_STATE', () => {
+    const expectedAction = {
+      type: 'EMPTY_STATE'
+    }
+
+    const result = actions.emptyState()
 
     expect(result).toEqual(expectedAction)
   })
