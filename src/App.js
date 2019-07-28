@@ -38,7 +38,7 @@ export class App extends Component {
             <Route exact path='/' component={Home}/>
             <Route exact path='/Den' render={() =>
               <div>
-                <h2>Broncos</h2>
+                <h2 className='team-name'>Broncos</h2>
               <TeamsContainer arrests={this.props.teamArrests}/> 
               </div>
             }/>

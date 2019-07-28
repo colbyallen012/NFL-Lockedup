@@ -49,7 +49,7 @@ export class TeamNavBar extends Component {
         <NavLink to='/buf' className='nav' onClick={() => this.singleTeamArrests('BUF')}>Buffalo Bills</NavLink>   
         <NavLink to='/ne' className='nav' onClick={() => this.singleTeamArrests('NE')}>New England Patriots</NavLink>   
         <NavLink to='/atl' className='nav' onClick={() => this.singleTeamArrests('ATL')}>Atlanta Falcons</NavLink>   
-        <NavLink to='/phi' className='nav' onClick={() => this.singleTeamArrests('PHI')}>Pjiladelphia Eagles</NavLink>   
+        <NavLink to='/phi' className='nav' onClick={() => this.singleTeamArrests('PHI')}>Philadelphia Eagles</NavLink>   
         <NavLink to='/nyg' className='nav' onClick={() => this.singleTeamArrests('NYG')}>New York Giants</NavLink>   
         <NavLink to='/la' className='nav' onClick={() => this.singleTeamArrests('LA')}>Los Angeles Rams</NavLink>   
         <NavLink to='/det' className='nav' onClick={() => this.singleTeamArrests('DET')}>Detroit Lions</NavLink> 

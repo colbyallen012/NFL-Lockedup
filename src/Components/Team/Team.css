@@ -2,6 +2,11 @@
   background-color: lightcyan;
   color: black;
   margin: 10px;
-  width: 200px;
-  height: 200px;
+  padding: 5px;
+  width: 90%;
+  /* height: 200px; */
+}
+
+.bolder {
+  font-weight: bolder;
 }

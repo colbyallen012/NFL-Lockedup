@@ -1,13 +1,35 @@
 .main { 
   display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-columns: repeat(5, 20vw); 
+  grid-template-rows: repeat(5, 20vh); 
   grid-column-gap: 0px;
   grid-row-gap: 0px; 
 
   }
 
-  .teams { grid-area: 1 / 1 / 6 / 2; }
-  .header { grid-area: 1 / 2 / 1 / 6; } 
-  .crimes { grid-area: 2 / 2 / 2 / 2; } 
-  .arrests { grid-area: 3 / 2 / 3 / 2; }
+  .header { 
+    grid-area: 1 / 2 / 1 / 6; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } 
+
+  h1 {
+    text-align: center;
+  }
+
+  .crimes { 
+    grid-area: 2 / 2 / 2 / 6; 
+  } 
+
+  .teams { 
+    grid-area: 1 / 1 / 6 / 2; 
+  }
+
+  .team-name {
+    text-align: center;
+  }
+
+  .arrests { 
+    grid-area: 4 / 2 / 6 / 6; 
+  }

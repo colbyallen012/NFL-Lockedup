@@ -5,7 +5,11 @@ const Team = ({player, position, arrest, description, outcome, season}) => {
 
   return (
     <div className='team'>
-      <li>{player} {position} {arrest} {description} {outcome} {season}</li>
+      <h3>{player}</h3>
+      <p><span className='bolder'>{position}</span></p>
+      <p><span className='bolder'>Charge: </span>{arrest} <span className='bolder'>Outcome: </span>{outcome}</p>
+      <p><span className='bolder'>Description: </span>{description}</p>
+      <p><span className='bolder'>Season: </span>{season}</p>
     </div>
   )
 }
