@@ -116,7 +116,17 @@ describe('TeamNavBar', () => {
     mappedProps.showCrimes([{category: 'DUI', arrests: 20}])
 
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
-    })
-  })
+    });
 
-})
+    it('calls dispatch with showPlayers action', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = showPlayers([{Name: "Kenny Britt", Team: "TEN", Team_name: "Titans"}]);
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.showPlayers([{Name: "Kenny Britt", Team: "TEN", Team_name: "Titans"}])
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    });
+  });
+
+});
