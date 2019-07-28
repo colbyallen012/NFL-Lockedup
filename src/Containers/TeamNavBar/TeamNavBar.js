@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import { getOneTeamData } from '../apiCalls/apiCalls'
+import { getOneTeamData } from '../../apiCalls/apiCalls'
 import { connect } from 'react-redux';
-import { showTeamArrests, showCrimes, showPlayers, emptyState } from '../Actions/index';
+import { showTeamArrests, showCrimes, showPlayers, emptyState } from '../../Actions/index';
 import {Route, NavLink} from 'react-router-dom'
 import './TeamNavBar.css'
-import TeamsContainer from '../Containers/TeamsContainer'
+import TeamsContainer from '../TeamsContainer/TeamsContainer'
 
 export class TeamNavBar extends Component {
 

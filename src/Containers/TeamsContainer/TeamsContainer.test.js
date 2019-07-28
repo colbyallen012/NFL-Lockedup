@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import TeamsContainer from './TeamsContainer';
+import TeamsContainer from '../TeamsContainer/TeamsContainer';
 
 describe('TeamsContainer', () => {
   let wrapper;

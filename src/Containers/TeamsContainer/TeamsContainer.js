@@ -1,5 +1,5 @@
 import React from 'react'; 
-import Team from '../Components/Team/Team'
+import Team from '../../Components/Team/Team'
 import './TeamsContainer.css'
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { TeamNavBar, mapStateToProps, mapDispatchToProps } from './TeamNavBar';
-import { showTeamArrests, showCrimes, showPlayers, emptyState } from '../Actions';
+import { showTeamArrests, showCrimes, showPlayers, emptyState } from '../../Actions';
 
 describe('TeamNavBar', () => {
   let wrapper;

@@ -3,9 +3,9 @@ import { getCrimesData, getPlayerData, getPositionData } from './apiCalls/apiCal
 import { connect } from 'react-redux';
 import { showCrimes, showPlayers, showPositions, showTeamArrests } from './Actions';
 import {Route} from 'react-router-dom'
-import CrimesContainer from './Containers/CrimesContainer'
-import TeamsContainer from './Containers/TeamsContainer'
-import TeamNavBar from './Containers/TeamNavBar'
+import CrimesContainer from './Containers/CrimesContainer/CrimesContainer'
+import TeamsContainer from './Containers/TeamsContainer/TeamsContainer'
+import TeamNavBar from './Containers/TeamNavBar/TeamNavBar'
 import Home from './Components/Home/Home'
 import './App.css';
 
