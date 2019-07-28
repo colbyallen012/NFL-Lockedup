@@ -127,6 +127,26 @@ describe('TeamNavBar', () => {
 
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
     });
+
+    it('calls dispatch with showTeamArrests action', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = showTeamArrests([{Name: "Kenny Britt", Team: "TEN", Team_name: "Titans", arrest: 'murder'}]);
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.showTeamArrests([{Name: "Kenny Britt", Team: "TEN", Team_name: "Titans", arrest: 'murder'}])
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    });
+
+    it('calls dispatch with emptyState action', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = emptyState([{}]);
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.emptyState([{}])
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    });
   });
 
 });
