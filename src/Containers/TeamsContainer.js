@@ -10,7 +10,7 @@ const TeamsContainer = ({arrests}) => {
         player={arrest.Name}
         position={arrest.Position_name}
         arrest={arrest.Category}
-        description={arrest.description}
+        description={arrest.Description}
         outcome={arrest.Outcome}
         season={arrest.ArrestSeasonState}
         key={arrest.Arrest_stats_id}

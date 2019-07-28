@@ -5,7 +5,7 @@ import { showTeamArrests, showCrimes, showPlayers, emptyState } from '../Actions
 import {Route, NavLink} from 'react-router-dom'
 import './TeamNavBar.css'
 import TeamsContainer from '../Containers/TeamsContainer'
-import Home from '../Components/Home'
+// import Home from '../Components/Home'
 // import CrimesContainer from '../Containers/CrimesContainer'
 
 class TeamNavBar extends Component {
@@ -58,13 +58,13 @@ class TeamNavBar extends Component {
         <NavLink to='/hou' className='nav' onClick={() => this.singleTeamArrests('HOU')}>Houston Texans</NavLink>
       </div>
       <div>
-        <Route exact path='/' component={Home}/>
-        <Route exact path='/Den' render={() =>
+        {/* <Route exact path='/' component={Home}/> */}
+        {/* <Route exact path='/Den' render={() =>
           <div>
             <h2>Broncos</h2>
             <TeamsContainer arrests={this.props.teamArrests}/> 
           </div>
-        }/>
+        }/> */}
         <Route exact path='/Min' render={() => 
           <div>
             <h2>Vikings</h2>

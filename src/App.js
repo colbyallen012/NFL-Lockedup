@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 import { getCrimesData, getPlayerData, getPositionData } from './apiCalls/apiCalls'
 import { connect } from 'react-redux';
 import { showCrimes, showPlayers, showPositions, showTeamArrests } from './Actions';
+import {Route} from 'react-router-dom'
 import CrimesContainer from './Containers/CrimesContainer'
 import TeamsContainer from './Containers/TeamsContainer'
 import TeamNavBar from './Containers/TeamNavBar'
+import Home from './Components/Home'
 import './App.css';
 
 class App extends Component {
@@ -29,11 +31,17 @@ class App extends Component {
           <section className='crimes'>
             <CrimesContainer crimes={this.props.crimes} players={this.props.players} positions={this.props.positions}/>
           </section>
-          <section classname='teams'>
+          <section className='teams'>
             <TeamNavBar crimes={this.props.crimes} players={this.props.players} />
           </section>
-          <section>
-            <TeamsContainer arrests={this.props.teamArrests}/>
+          <section className='arrests'>
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/Den' render={() =>
+              <div>
+                <h2>Broncos</h2>
+              <TeamsContainer arrests={this.props.teamArrests}/> 
+              </div>
+            }/>
           </section>
         </main>
     )

@@ -1,4 +1,4 @@
-/* .main { 
+.main { 
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
@@ -9,4 +9,5 @@
 
   .teams { grid-area: 1 / 1 / 6 / 2; }
   .header { grid-area: 1 / 2 / 1 / 6; } 
-  .crimes { grid-area: 2 / 2 / 3 / 6; }  */
+  .crimes { grid-area: 2 / 2 / 2 / 2; } 
+  .arrests { grid-area: 3 / 2 / 3 / 2; }
