@@ -1,4 +1,4 @@
-import { crimeReducer, teamArrestsReducer, playerReducer } from './dataReducers';
+import { crimeReducer, teamArrestsReducer, playerReducer, positionReducer } from './dataReducers';
 
 describe('crimeReducer', () => {
   it('should return the initial state', () => {
@@ -55,6 +55,26 @@ describe('playerReducer', () => {
       players: [{player: 'Colby', position: 'WR'}]
     }
     const result = playerReducer([], action)
+
+    expect(result).toEqual(expected)
+  })
+})
+
+describe('positionReducer', () => {
+  it('should return the initial state', () => {
+    const expected = [];
+    const result = positionReducer(undefined, {})
+
+    expect(result).toEqual(expected)
+  })
+
+  it('should return the state with positions array', () => {
+    const expected = [{player: 'Colby', position: 'WR'}]
+    const action = {
+      type: 'SHOW_POSITIONS',
+      positions: [{player: 'Colby', position: 'WR'}]
+    }
+    const result = positionReducer([], action)
 
     expect(result).toEqual(expected)
   })
