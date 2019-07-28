@@ -27,5 +27,20 @@ describe('apiCalls', () => {
       getCrimesData();
       expect(window.fetch).toHaveBeenCalledWith(expected)
     });
+
+    it('should return a parsed response', async () => {
+      const result = await getCrimesData();
+      expect(result).toEqual(mockCrimes)
+    })
+
+    it('should return an error response', async () => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.reject({
+          message: 'Error fetching people'
+        })
+      });
+
+      expect(getCrimesData()).rejects.toEqual(Error('Error fetching crimes'));
+    })
   });
 })
