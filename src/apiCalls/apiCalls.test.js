@@ -119,4 +119,46 @@ describe('apiCalls', () => {
       expect(getOneTeamData()).rejects.toEqual(Error('Error fetching team'));
     })
   })
+
+  describe('getPlayerData', () => {
+    let mockPlayer;
+
+    beforeEach(() => {
+      mockPlayer = [{
+        Name: "Kenny Britt",
+        Team: "TEN",
+        Team_name: "Titans",
+        Team_city: "Nashville",
+        Position: "WR",
+        arrest_count: "7"
+      }]
+
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          json: () => Promise.resolve(mockPlayer)
+        });
+      });
+    });
+
+    it('should be called with the correct url', async () => {
+      const expected = 'http://nflarrest.com/api/v1/player';
+      getPlayerData();
+      expect(window.fetch).toHaveBeenCalledWith(expected)
+    });
+
+    it('should return a parsed response', async () => {
+      const result = await getPlayerData();
+      expect(result).toEqual(mockPlayer)
+    });
+
+    it('should return an error response', async () => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.reject({
+          message: 'Error fetching players'
+        })
+      });
+
+      expect(getPlayerData()).rejects.toEqual(Error('Error fetching players'));
+    })
+  })
 })
