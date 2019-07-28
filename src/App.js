@@ -9,7 +9,7 @@ import TeamNavBar from './Containers/TeamNavBar/TeamNavBar'
 import Home from './Components/Home/Home'
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
 
   async componentDidMount() {
     getCrimesData()
