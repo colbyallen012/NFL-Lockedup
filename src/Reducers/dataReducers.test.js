@@ -1,4 +1,4 @@
-import { crimeReducer } from './dataReducers';
+import { crimeReducer, teamArrestsReducer } from './dataReducers';
 
 describe('crimeReducer', () => {
   it('should return the initial state', () => {
@@ -15,6 +15,15 @@ describe('crimeReducer', () => {
       crimes: [{crime: 'DUI', arrests: 20}]
     }
     const result = crimeReducer([], action)
+
+    expect(result).toEqual(expected)
+  })
+})
+
+describe('teamArrestsReducer', () => {
+  it('should return the initial state', () => {
+    const expected = [];
+    const result = teamArrestsReducer(undefined, {})
 
     expect(result).toEqual(expected)
   })
