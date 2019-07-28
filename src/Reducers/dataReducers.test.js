@@ -27,4 +27,15 @@ describe('teamArrestsReducer', () => {
 
     expect(result).toEqual(expected)
   })
+
+  it('should return the state with team arrests array', () => {
+    const expected = [{player: 'Colby', team: 'DEN', crime:'Bank robbery'}]
+    const action = {
+      type: 'SHOW_TEAM_ARRESTS',
+      team: [{player: 'Colby', team: 'DEN', crime:'Bank robbery'}]
+    }
+    const result = teamArrestsReducer([], action)
+
+    expect(result).toEqual(expected)
+  })
 })
