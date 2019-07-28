@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamsContainer should match snapshot 1`] = `
+<section
+  className="team-container"
+>
+  <section
+    className="team-container"
+  >
+    <Team
+      arrest="Trespassing"
+      description="The Englewood Colorado Police arrested and charged Kelly with first-degree criminal trespassing after a report of a man allegedly inside a home."
+      outcome="Resolution Undetermined."
+      player="Chad Kelly"
+      position="Quarterback"
+      season="InSeason"
+    />
+  </section>
+</section>
+`;
