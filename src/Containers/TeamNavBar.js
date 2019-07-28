@@ -5,10 +5,8 @@ import { showTeamArrests, showCrimes, showPlayers, emptyState } from '../Actions
 import {Route, NavLink} from 'react-router-dom'
 import './TeamNavBar.css'
 import TeamsContainer from '../Containers/TeamsContainer'
-// import Home from '../Components/Home'
-// import CrimesContainer from '../Containers/CrimesContainer'
 
-class TeamNavBar extends Component {
+export class TeamNavBar extends Component {
 
   singleTeamArrests = (team) => {
     getOneTeamData(team)
@@ -257,13 +255,13 @@ class TeamNavBar extends Component {
   }
 }
 
-const mapStateToProps = (store) => ({
+export const mapStateToProps = (store) => ({
   crimes: store.crimes,
   players: store.players,
   teamArrests: store.teamArrests
 })
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   showCrimes: (crimes) => dispatch(showCrimes(crimes)),
   showPlayers: (players) => dispatch(showPlayers(players)),
   showTeamArrests: (team) => dispatch(showTeamArrests(team)),
