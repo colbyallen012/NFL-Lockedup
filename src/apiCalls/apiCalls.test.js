@@ -161,4 +161,46 @@ describe('apiCalls', () => {
       expect(getPlayerData()).rejects.toEqual(Error('Error fetching players'));
     })
   })
+
+  describe('getPositionData', () => {
+    let mockPosition;
+
+    beforeEach(() => {
+      mockPosition = [{
+        Position: "WR",
+        arrest_count: "148"
+        },
+        {
+        Position: "LB",
+        arrest_count: "127"
+      }]
+
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          json: () => Promise.resolve(mockPosition)
+        });
+      });
+    });
+
+    it('should be called with the correct url', async () => {
+      const expected = 'http://nflarrest.com/api/v1/position';
+      getPositionData();
+      expect(window.fetch).toHaveBeenCalledWith(expected)
+    });
+
+    it('should return a parsed response', async () => {
+      const result = await getPositionData();
+      expect(result).toEqual(mockPosition)
+    });
+    
+    it('should return an error response', async () => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.reject({
+          message: 'Error fetching positions'
+        })
+      });
+
+      expect(getPositionData()).rejects.toEqual(Error('Error fetching position'));
+    })
+  })
 })
