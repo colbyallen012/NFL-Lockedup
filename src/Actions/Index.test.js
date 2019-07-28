@@ -90,4 +90,24 @@ describe ('actions', () => {
 
     expect(result).toEqual(expectedAction)
   })
+
+  it('should have a type SHOW_POSITIONS', () => {
+    const positions = [{
+        Position: "WR",
+        arrest_count: "148"
+        },
+        {
+        Position: "LB",
+        arrest_count: "127"
+    }]
+
+    const expectedAction = {
+      type: 'SHOW_POSITIONS',
+      positions
+    }
+
+    const result = actions.showPositions(positions)
+
+    expect(result).toEqual(expectedAction)
+  })
 })
