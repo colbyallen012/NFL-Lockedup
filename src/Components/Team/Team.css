@@ -1,12 +1,22 @@
 .team {
-  background-color: lightcyan;
+  background-color: white;
+  border-radius: 20px;
   color: black;
   margin: 10px;
   padding: 5px;
   width: 90%;
-  /* height: 200px; */
+}
+
+.player {
+  margin: 0px auto;
+  text-align: center;
+  width: 50%;
 }
 
 .bolder {
   font-weight: bolder;
+}
+
+.lighter {
+  font-weight: normal;
 }
