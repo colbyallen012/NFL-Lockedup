@@ -40,7 +40,7 @@ const CrimesContainer = ({crimes, players, positions}) => {
     <div>
       <section className='all-container'>
         <article className='crimes-container'>
-          <h2 className='heading'>By Crime</h2>
+          <h2 className='heading'>Crime</h2>
           {displayCrimes}
         </article>
         <article className='player-container'>
@@ -48,7 +48,7 @@ const CrimesContainer = ({crimes, players, positions}) => {
           {displayPlayers}
         </article>
         <article className='position-container'>
-          <h2 className='heading'>By Position</h2>  
+          <h2 className='heading'>Position</h2>  
           {displayPositions}
         </article>
       </section>

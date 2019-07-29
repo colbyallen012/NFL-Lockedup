@@ -1,13 +1,13 @@
 import React from 'react';
 import './Position.css';
 
-const Player = ({position, arrests}) => {
+const Position = ({position, arrests}) => {
   return (
-    <div className='crime'>
+    <div className='position'>
       <h3>{position}</h3>
       <p>Arrest Count: {arrests}</p>
     </div>
   )
 }
 
-export default Player;
+export default Position;

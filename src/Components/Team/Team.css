@@ -3,14 +3,19 @@
   border-radius: 20px;
   color: black;
   margin: 10px;
-  padding: 5px;
+  /* padding: 5px; */
   width: 90%;
 }
 
-.player {
-  margin: 0px auto;
+.player-name {
+  background-color: #D50A0A;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+  height: 40px;
+  padding-top: 10px;
+  margin: 0px;
   text-align: center;
-  width: 50%;
 }
 
 .bolder {
@@ -19,4 +24,8 @@
 
 .lighter {
   font-weight: normal;
+}
+
+.info {
+  padding-left: 25px;
 }
