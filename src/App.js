@@ -62,7 +62,7 @@ export class App extends Component {
             }/>
             <Route exact path='/Tb' render={() => 
               <div>
-                <h2 className='team-name'>Bucaneers</h2>
+                <h2 className='team-name'>Buccaneers</h2>
                 <TeamsContainer arrests={this.props.teamArrests}/> 
               </div>
             }/>

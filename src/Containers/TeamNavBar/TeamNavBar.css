@@ -6,8 +6,17 @@
 }
 
 .nav {
-  background-color: yellow;
+  color: white;
+  font-weight: bolder;
   height: 25px;
-  margin: 5px;
-  width: 200px;
+  margin: 5px auto;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 90%;
+}
+
+.nav:focus {
+  background-color: #013369;
+  border-radius: 20px;
 }
