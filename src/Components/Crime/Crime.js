@@ -4,8 +4,8 @@ import './Crime.css';
 const Crime = ({category, arrests}) => {
   return (
     <div className='crime'>
-      <h3>{category}</h3>
-      <p>Arrest Count: {arrests}</p>
+      <h3 className='crime-crime'>{category}</h3>
+      <p className='crime-arrests'>Arrest Count: {arrests}</p>
     </div>
   )
 }

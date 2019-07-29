@@ -7,6 +7,15 @@
   width:  300px;
 }
 
+.crime-player-name {
+  background-color: #D50A0A;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+  margin: 0px;
+  text-shadow: 1px 1px #013369;
+}
+
 .deets {
   font-weight: normal;
   font-size: 15px;

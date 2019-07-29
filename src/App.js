@@ -60,7 +60,7 @@ export class App extends Component {
         <main className='main'>
           <header className='header'>
             <img className='logo' alt='NFL logo' src={league}/>  
-            <h1>NFL LockedUp</h1>
+            <h1 className='title'>NFL LockedUp</h1>
           </header>
           <section className='crimes'>
             <CrimesContainer crimes={this.props.crimes} players={this.props.players} positions={this.props.positions}/>

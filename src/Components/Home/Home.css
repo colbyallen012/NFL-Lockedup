@@ -1,14 +1,17 @@
 .welcome {
   text-align: center;
-  margin: 20px auto;
+  margin: 18px auto;
 }
 
 .welcome-header {
   color: white;
   font-size: 60px;
+  margin: 10px;
+  text-shadow: 2px 2px #D50A0A;
 }
 
 .instructions, .date {
   color: white;
   font-size: 30px;
+  text-shadow: 1px 1px #D50A0A;
 }

@@ -7,3 +7,12 @@
   width:  300px;
 }
 
+.crime-crime {
+  background-color: #D50A0A;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+  margin: 0px;
+  text-shadow: 1px 1px #013369;
+}
+

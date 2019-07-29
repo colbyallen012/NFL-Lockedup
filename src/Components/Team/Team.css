@@ -16,6 +16,8 @@
   padding-top: 10px;
   margin: 0px;
   text-align: center;
+  text-shadow: 2px 2px #013369;
+  font-size: 25px;
 }
 
 .bolder {
@@ -24,6 +26,7 @@
 
 .lighter {
   font-weight: normal;
+  font-size: 18px;
 }
 
 .info {

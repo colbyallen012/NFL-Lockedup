@@ -12,9 +12,6 @@
     justify-content: center;
     background-color: white;
     grid-area: 1 / 2 / 1 / 6; 
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
   } 
 
   .logo {
@@ -23,12 +20,19 @@
     width: 120px;
   }
 
-  h1 {
+  .title {
+    color: #013369;
+    font-family: Graduate;
+    font-size: 90px;
     text-align: center;
+    text-shadow: 3px 3px #D50A0A; 
     margin: auto 10px;
   }
 
   .crimes { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     grid-area: 2 / 2 / 2 / 6; 
     margin: 10px 0px;
   } 
@@ -40,20 +44,28 @@
 
   .team-header {
     background-color: white;
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0px auto;
+    width: 92%;
   }
 
   .team-name {
-    text-align: center;
+    color: #013369;
+    font-family: Graduate;
+    font-size: 30px;
+    letter-spacing: 1px;
     margin: auto 15px;
+    text-align: center;
+    text-shadow: 1px 1px #D50A0A;
   }
 
   .team-logo {
     height: 80px;
     margin: auto 15px;
-    width: 80px;
+    width: 90px;
   }
 
   .arrests { 

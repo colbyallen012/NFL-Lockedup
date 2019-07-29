@@ -12,10 +12,13 @@
   padding: 5px;
   text-align: center;
   text-decoration: none;
+  text-shadow: 2px 2px #013369;
+  font-size: 20px;
   width: 90%;
 }
 
 .nav:focus {
   background-color: #013369;
   border-radius: 20px;
+  text-shadow: 1px 1px #D50A0A;
 }
