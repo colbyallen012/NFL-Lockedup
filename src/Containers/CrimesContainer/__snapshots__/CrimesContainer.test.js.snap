@@ -11,7 +11,7 @@ exports[`CrimesContainer should match snapshot 1`] = `
       <h2
         className="heading"
       >
-        By Crime
+        Crime
       </h2>
       <Crime
         arrests="224"
@@ -44,13 +44,13 @@ exports[`CrimesContainer should match snapshot 1`] = `
       <h2
         className="heading"
       >
-        By Position
+        Position
       </h2>
-      <Player
+      <Position
         arrests="148"
         position="WR"
       />
-      <Player
+      <Position
         arrests="127"
         position="LB"
       />

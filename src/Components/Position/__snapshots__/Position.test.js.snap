@@ -2,12 +2,16 @@
 
 exports[`Team should match the snapshot 1`] = `
 <div
-  className="crime"
+  className="position"
 >
-  <h3>
+  <h3
+    className="crime-position"
+  >
     WR
   </h3>
-  <p>
+  <p
+    className="crime-arrests"
+  >
     Arrest Count: 
     200
   </p>

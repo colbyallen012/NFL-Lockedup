@@ -2,9 +2,11 @@
 
 exports[`Player should match the snapshot 1`] = `
 <div
-  className="position"
+  className="player"
 >
-  <h3>
+  <h3
+    className="crime-player-name"
+  >
     Colby Allen
      
     <span
@@ -17,7 +19,9 @@ exports[`Player should match the snapshot 1`] = `
       Front End
     </span>
   </h3>
-  <p>
+  <p
+    className="crime-arrests"
+  >
     Arrest Count: 
     0
   </p>

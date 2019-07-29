@@ -4,24 +4,30 @@ exports[`Team should match the snapshot 1`] = `
 <div
   className="team"
 >
-  <h3>
+  <h3
+    className="player-name"
+  >
     Colby Allen
-  </h3>
-  <p>
+     
     <span
-      className="bolder"
+      className="lighter"
     >
       QB
     </span>
-  </p>
-  <p>
+  </h3>
+  <p
+    className="info"
+  >
     <span
       className="bolder"
     >
       Charge: 
     </span>
     Bank Robbery
-     
+  </p>
+  <p
+    className="info"
+  >
     <span
       className="bolder"
     >
@@ -29,7 +35,9 @@ exports[`Team should match the snapshot 1`] = `
     </span>
     Still on the lamb
   </p>
-  <p>
+  <p
+    className="info"
+  >
     <span
       className="bolder"
     >
@@ -37,7 +45,9 @@ exports[`Team should match the snapshot 1`] = `
     </span>
     Robbed a bank for 100 million dollars
   </p>
-  <p>
+  <p
+    className="info"
+  >
     <span
       className="bolder"
     >

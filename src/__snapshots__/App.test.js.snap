@@ -7,7 +7,14 @@ exports[`App should match the snapshot 1`] = `
   <header
     className="header"
   >
-    <h1>
+    <img
+      alt="NFL logo"
+      className="logo"
+      src="league.png"
+    />
+    <h1
+      className="title"
+    >
       NFL LockedUp
     </h1>
   </header>
