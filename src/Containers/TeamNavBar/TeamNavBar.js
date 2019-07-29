@@ -3,6 +3,7 @@ import { getOneTeamData } from '../../apiCalls/apiCalls'
 import { connect } from 'react-redux';
 import { showTeamArrests, showCrimes, showPlayers, emptyState } from '../../Actions/index';
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types';
 import './TeamNavBar.css'
 
 export class TeamNavBar extends Component {
@@ -71,5 +72,15 @@ export const mapDispatchToProps = dispatch => ({
   showTeamArrests: (team) => dispatch(showTeamArrests(team)),
   emptyState: () => dispatch(emptyState())
 })
+
+TeamNavBar.propTypes = {
+  crimes: PropTypes.array.isRequired,
+  players: PropTypes.array.isRequired,
+  teamArrests: PropTypes.array.isRequired,
+  showCrimes: PropTypes.func.isRequired,
+  showPlayers: PropTypes.func.isRequired,
+  showTeamArrests: PropTypes.func.isRequired,
+  emptyState: PropTypes.func.isRequired
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(TeamNavBar);

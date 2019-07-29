@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Position.css';
 
 const Position = ({position, arrests}) => {
@@ -8,6 +9,11 @@ const Position = ({position, arrests}) => {
       <p className='crime-arrests'>Arrest Count: {arrests}</p>
     </div>
   )
+}
+
+Position.propTypes = {
+  position: PropTypes.string.isRequired,
+  arrests: PropTypes.string.isRequired
 }
 
 export default Position;

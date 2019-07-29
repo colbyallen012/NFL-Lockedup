@@ -1,5 +1,6 @@
 import React from 'react'; 
 import Team from '../../Components/Team/Team'
+import PropTypes from 'prop-types';
 import './TeamsContainer.css'
 
 
@@ -24,6 +25,10 @@ const TeamsContainer = ({arrests}) => {
       </section>
     </section>
   )
+}
+
+TeamsContainer.propTypes = {
+  arrests: PropTypes.array.isRequired
 }
 
 export default TeamsContainer;

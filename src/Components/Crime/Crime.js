@@ -11,7 +11,7 @@ const Crime = ({category, arrests}) => {
   )
 }
 
-Crime.PropTypes = {
+Crime.propTypes = {
   category: PropTypes.string.isRequired,
   arrests: PropTypes.string.isRequired
 }

@@ -11,7 +11,7 @@ const Player = ({name, city, team, position, arrests}) => {
   )
 }
 
-Crime.PropTypes = {
+Player.propTypes = {
   name: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
   team: PropTypes.string.isRequired,

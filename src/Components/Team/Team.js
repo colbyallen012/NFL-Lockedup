@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Team.css';
 
 const Team = ({player, position, arrest, description, outcome, season}) => {
@@ -12,6 +13,15 @@ const Team = ({player, position, arrest, description, outcome, season}) => {
       <p className='info'><span className='bolder'>Season: </span>{season}</p>
     </div>
   )
+}
+
+Team.propTypes = {
+  player: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  arrest: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  outcome: PropTypes.string.isRequired,
+  season: PropTypes.string.isRequired
 }
 
 export default Team;

@@ -1,45 +1,46 @@
 import React, {Component} from 'react';
-import { getCrimesData, getPlayerData, getPositionData } from './apiCalls/apiCalls'
+import { getCrimesData, getPlayerData, getPositionData } from '../apiCalls/apiCalls'
 import { connect } from 'react-redux';
-import { showCrimes, showPlayers, showPositions, showTeamArrests } from './Actions';
+import { showCrimes, showPlayers, showPositions, showTeamArrests } from '../Actions';
 import {Route} from 'react-router-dom'
-import CrimesContainer from './Containers/CrimesContainer/CrimesContainer'
-import TeamsContainer from './Containers/TeamsContainer/TeamsContainer'
-import TeamNavBar from './Containers/TeamNavBar/TeamNavBar'
-import Home from './Components/Home/Home'
-import league from './Images/league.png'
-import broncos from './Images/broncos.png'
-import vikings from './Images/vikings.png'
-import bengals from './Images/bengals.png'
-import jaguars from './Images/jaguars.png'
-import buccaneers from './Images/buccaneers.png'
-import titans from './Images/titans.png'
-import browns from './Images/browns.png'
-import colts from './Images/colts.png'
-import chiefs from './Images/chiefs.png'
-import bears from './Images/bears.png'
-import dolphins from './Images/dolphins.png'
-import seahawks from './Images/seahawks.png'
-import niners from './Images/49ers.png'
-import ravens from './Images/ravens.png'
-import chargers from './Images/chargers.png'
-import saints from './Images/saints.png'
-import packers from './Images/packers.png'
-import steelers from './Images/steelers.png'
-import jets from './Images/jets.png'
-import cardinals from './Images/cardinals.png'
-import raiders from './Images/raiders.png'
-import redskins from './Images/redskins.png'
-import cowboys from './Images/cowboys.png'
-import panthers from './Images/panthers.png'
-import bills from './Images/bills.png'
-import patriots from './Images/patriots.png'
-import falcons from './Images/falcons.png'
-import eagles from './Images/eagles.png'
-import giants from './Images/giants.png'
-import rams from './Images/rams.png'
-import lions from './Images/lions.png'
-import texans from './Images/texans.png'
+import CrimesContainer from '../Containers/CrimesContainer/CrimesContainer'
+import TeamsContainer from '../Containers/TeamsContainer/TeamsContainer'
+import TeamNavBar from '../Containers/TeamNavBar/TeamNavBar'
+import PropTypes from 'prop-types';
+import Home from '../Components/Home/Home'
+import league from '../Images/league.png'
+import broncos from '../Images/broncos.png'
+import vikings from '../Images/vikings.png'
+import bengals from '../Images/bengals.png'
+import jaguars from '../Images/jaguars.png'
+import buccaneers from '../Images/buccaneers.png'
+import titans from '../Images/titans.png'
+import browns from '../Images/browns.png'
+import colts from '../Images/colts.png'
+import chiefs from '../Images/chiefs.png'
+import bears from '../Images/bears.png'
+import dolphins from '../Images/dolphins.png'
+import seahawks from '../Images/seahawks.png'
+import niners from '../Images/49ers.png'
+import ravens from '../Images/ravens.png'
+import chargers from '../Images/chargers.png'
+import saints from '../Images/saints.png'
+import packers from '../Images/packers.png'
+import steelers from '../Images/steelers.png'
+import jets from '../Images/jets.png'
+import cardinals from '../Images/cardinals.png'
+import raiders from '../Images/raiders.png'
+import redskins from '../Images/redskins.png'
+import cowboys from '../Images/cowboys.png'
+import panthers from '../Images/panthers.png'
+import bills from '../Images/bills.png'
+import patriots from '../Images/patriots.png'
+import falcons from '../Images/falcons.png'
+import eagles from '../Images/eagles.png'
+import giants from '../Images/giants.png'
+import rams from '../Images/rams.png'
+import lions from '../Images/lions.png'
+import texans from '../Images/texans.png'
 import './App.css';
 
 export class App extends Component {
@@ -377,6 +378,15 @@ const mapDispatchToProps = dispatch => ({
   showPositions: (positions) => dispatch(showPositions(positions)),
   showTeamArrests: (team) => dispatch(showTeamArrests(team))
 })
+
+App.propTypes = {
+  crimes: PropTypes.array.isRequired,
+  players: PropTypes.array.isRequired,
+  teamArrests: PropTypes.array.isRequired,
+  showCrimes: PropTypes.func.isRequired,
+  showPlayers: PropTypes.func.isRequired,
+  showTeamArrests: PropTypes.func.isRequired
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
