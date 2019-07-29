@@ -15,9 +15,9 @@ const Team = ({player, position, arrest, description, outcome, season}) => {
   )
 }
 
-Team.PropTypes = {
-  Player: PropTypes.string.isRequired,
-  Position: PropTypes.string.isRequired,
+Team.propTypes = {
+  player: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
   arrest: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   outcome: PropTypes.string.isRequired,

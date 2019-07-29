@@ -2,6 +2,7 @@ import React from 'react';
 import Crime from '../../Components/Crime/Crime'
 import Player from '../../Components/Player/Player'
 import Position from '../../Components/Position/Position'
+import PropTypes from 'prop-types';
 import './CrimesContainer.css'
 
 const CrimesContainer = ({crimes, players, positions}) => {
@@ -54,6 +55,12 @@ const CrimesContainer = ({crimes, players, positions}) => {
       </section>
     </div>
   )
+}
+
+CrimesContainer.propTypes = {
+  crimes: PropTypes.array.isRequired,
+  players: PropTypes.array.isRequired,
+  positions: PropTypes.array.isRequired
 }
 
 export default CrimesContainer;

@@ -11,8 +11,8 @@ const Position = ({position, arrests}) => {
   )
 }
 
-Position.PropTypes = {
-  category: PropTypes.string.isRequired,
+Position.propTypes = {
+  position: PropTypes.string.isRequired,
   arrests: PropTypes.string.isRequired
 }
 
