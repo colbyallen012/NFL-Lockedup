@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Crime.css';
 
 const Crime = ({category, arrests}) => {
@@ -8,6 +9,11 @@ const Crime = ({category, arrests}) => {
       <p className='crime-arrests'>Arrest Count: {arrests}</p>
     </div>
   )
+}
+
+Crime.PropTypes = {
+  category: PropTypes.string.isRequired,
+  arrests: PropTypes.string.isRequired
 }
 
 export default Crime;
