@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Player.css';
 
 const Player = ({name, city, team, position, arrests}) => {
@@ -8,6 +9,14 @@ const Player = ({name, city, team, position, arrests}) => {
       <p className='crime-arrests'>Arrest Count: {arrests}</p>
     </div>
   )
+}
+
+Crime.PropTypes = {
+  name: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  team: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  arrests: PropTypes.string.isRequired
 }
 
 export default Player;
